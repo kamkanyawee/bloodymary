@@ -1,8 +1,4 @@
 <?php
-    header("Access-Control-Allow-Origin: *");
-    header("Content-Type: application/json; charset=UTF-8");
-
-    //Component Implementation
     class Ticket{
         public static function getTicketInfo($flightid) {
             $conn = new mysqli("127.0.0.1", "root", "", "bloodymary");
@@ -33,7 +29,4 @@
             return $result;
         }
     }
-    //Server-Client Interface
-    if(isset($_POST['flightid'])) echo json_encode(Ticket::getTicketInfo($_POST['flightid']));
-    else echo json_encode(Ticket::filterTicket());
 ?>

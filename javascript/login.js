@@ -9,7 +9,7 @@ function login_req() {
             window.location="store.html"
         }
     }
-    xmlhttp.open("POST", "component/Account.php", true);
+    xmlhttp.open("POST", "component/AccountInterface.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("function=login&username=" + document.getElementById("username_box").value + "&password=" + document.getElementById("password_box").value);
 }
@@ -21,7 +21,7 @@ function logout_req() {
             window.location="store.html"
         }
     }
-    xmlhttp.open("POST", "component/Account.php", true);
+    xmlhttp.open("POST", "component/AccountInterface.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("function=logout");
 }
@@ -33,7 +33,7 @@ function check_login_status() {
             disp_login_status(xmlhttp.responseText);
         }
     }
-    xmlhttp.open("POST", "component/Account.php", true);
+    xmlhttp.open("POST", "component/AccountInterface.php", true);
     xmlhttp.send();
 }
 function disp_login_status(response) {
@@ -51,6 +51,6 @@ function disp_login_status(response) {
         '<li>' + answer.userinfo.FirstName + '</li>' +
         '<li><button onclick="logout_req()" type="button" class="submitButton">LOG OUT</button></li>';
         if(document.getElementById("cart") != null)
-            document.getElementById("cart").innerHTML = '<a href="cart.html">Cart(' + answer.cart.length + ')</a>';
+            document.getElementById("cart").innerHTML = '<a href="cart.html">Cart</a>';
     }
 }

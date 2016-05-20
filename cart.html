@@ -8,32 +8,32 @@
         <div class="bar" style="background-color:#d23">
             <ul style="float:left" id="nav">
                 <li><a class="logo">BloodyMary</a></li>
-                <li><a href="store.html" class="active">Tickets</a></li>
-                <li id="cart"></li>
+                <li><a href="store.html">Tickets</a></li>
+                <li><a href="cart.html" class="active">Cart</a></li>
             </ul>
             <ul style="float:right;height:20px" id="loginbar"></ul>
         </div>
         <div class="bar" style="background-color:#fff">
-            <ul style="float:left;padding-left:20px"><li style="color:#000"><strong>Flights</strong></li></ul>
+            <ul style="float:left;padding-left:20px"><li style="color:#000"><strong>Cart</strong></li></ul>
 		</div>
         <div class="container">
-            <div id="sidebar">Filter (Not Available)</div>
-            <div id="deck"></div>
+            <div id="lineitem"></div>
         </div>
+        <div class="bar" style="background-color:#000">
+            <ul style="float:right;padding-left:20px" id="totalfare"></ul>
+		</div>
     </body>
     <!--Script For Login Bar-->
     <script src="javascript/login.js"></script>
-    <!--Script For Flight List-->
-    <script src="javascript/flight.js"></script>
     <!--Script For Cart-->
     <script src="javascript/cart.js"></script>
     <script>
         window.onload = function() {
             check_login_status();
-            load_cards();
+            load_lineitem();
         };
         window.onresize = function() {
-            load_cards();
+            load_lineitem();
         };
     </script>
 </html>

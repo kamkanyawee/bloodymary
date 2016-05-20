@@ -5,7 +5,7 @@ function load_cards() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
             set_cards(xmlhttp.responseText);
     }
-    xmlhttp.open("POST", "component/Ticket.php", true);
+    xmlhttp.open("POST", "component/TicketInterface.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send();
 }
@@ -25,13 +25,13 @@ function set_cards(response) {
                 cards += "To : " + flightlist[i].Destination + "<br/>";
         		cards += flightlist[i].Fare + " THB</div>";
                 if(answer.authen == 1)
-                    cards += '<div><button onclick="" type="button" class="addButton" style="float:right">ADD</button></div></div>';
+                    cards += '<div><button onclick="add_to_cart(' + flightlist[i].FlightID + ')" type="button" class="addButton" style="float:right">ADD</button></div></div>';
                 else
                     cards += '<div><button type="button" class="lockButton" style="float:right">LOGIN<br/>FIRST</button></div></div>';
             }
             document.getElementById("deck").innerHTML = cards;
         }
     }
-    xmlhttp.open("POST", "component/Account.php", true);
+    xmlhttp.open("POST", "component/AccountInterface.php", true);
     xmlhttp.send();
 }

@@ -106,15 +106,41 @@ body{
     color: #fff;
     height: 100px;
     width: 60px;
+    background-color: #080;
+    border-radius: 3px;
+    border-style: none;
+    border: 2px solid #080;
+    transition-delay: 50ms;
+}
+.addButton:hover {
+    color: #080;
+    background-color: #fff;
+    border: 2px solid #080;
+}
+.addButton:active {
+    color: #080;
+    background-color: #8c8;
+    border: 2px solid #080;
+}
+.removeButton {
+    color: #fff;
+    height: 100px;
+    width: 60px;
     background-color: #d00;
     border-radius: 3px;
     border-style: none;
     border: 2px solid #d00;
+    transition-delay: 50ms;
 }
-.addButton:hover {
-    color: #d23;
+.removeButton:hover {
+    color: #d00;
     background-color: #fff;
-    border: 2px solid #d23;
+    border: 2px solid #d00;
+}
+.removeButton:active {
+    color: #d00;
+    background-color: #fdd;
+    border: 2px solid #d00;
 }
 .lockButton {
     color: #000;
