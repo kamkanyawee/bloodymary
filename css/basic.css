@@ -1,0 +1,93 @@
+body{
+    min-width: 750px;
+    width: auto !important;
+    width: 750px;
+    margin: 0;
+    padding: 0;
+    font-family: verdana;
+}
+.bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 20px;
+    overflow: hidden;
+    background-color: #d23;
+    font-size: 14px;
+}
+.bar li {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-family: verdana;
+}
+.bar li a {
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-family: verdana;
+}
+.inputForm {
+    height: 20px;
+    border-radius: 2px;
+    border-style: none;
+}
+.submitButton {
+    color: #fff;
+    height: 20px;
+    background-color: #333;
+    border-radius: 3px;
+    border-style: none;
+}
+.submitButton:hover {
+    color: #d23;
+    background-color: #fff;
+}
+#nav {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #d23;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #d23;
+}
+#nav li {
+    float: left;
+}
+#nav li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: verdana;
+}
+#nav li a:hover:not(.active):not(.image):not(.logo) {
+    transition: 0.25s;
+    border-bottom: 5px solid #faa;
+}
+
+.active {
+    border-bottom: 5px solid #faa;
+}
+.deck {
+    height:320px;
+    width:100%;
+}
+.card {
+    margin:10px;
+    margin-right:0px;
+    float:left;
+    height:300px;
+    background-color:#ccc;
+    font-family: verdana;
+    text-align: right;
+    number-format: "0.00";
+}
+.card:hover {
+    background-color:#f44;
+    color: #fff;
+}

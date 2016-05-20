@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/basic.css">
+        <title>BloodyMary::Tickets</title>
+    </head>
+    <body>
+        <div class="bar">
+            <ul style="float:left" id="nav">
+                <li><a class="logo">BloodyMary</a></li>
+                <li><a href="store.html" class="active">Tickets</a></li>
+                <li id="cart"></li>
+            </ul>
+            <ul style="float:right;height:20px" id="loginbar"></ul>
+        </div>
+    </body>
+    <!--Script For Login Bar-->
+    <script src="javascript/login.js"></script>
+    <script>
+        window.onload = function() {
+            check_login_status();
+        };
+        window.onresize = function() {
+        };
+    </script>
+</html>
