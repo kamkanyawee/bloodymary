@@ -2,10 +2,10 @@
 <html lang="en-US">
     <head>
         <link rel="stylesheet" type="text/css" href="css/basic.css">
-        <title>BloodyMary::Tickets</title>
+        <title>BloodyMary :: Tickets</title>
     </head>
     <body>
-        <div class="bar">
+        <div class="bar" style="background-color:#d23">
             <ul style="float:left" id="nav">
                 <li><a class="logo">BloodyMary</a></li>
                 <li><a href="store.html" class="active">Tickets</a></li>
@@ -13,14 +13,25 @@
             </ul>
             <ul style="float:right;height:20px" id="loginbar"></ul>
         </div>
+        <div class="bar" style="background-color:#fff">
+            <ul style="float:left;padding-left:20px"><li style="color:#000"><strong>Flights</strong></li></ul>
+		</div>
+        <div class="container">
+            <div id="sidebar">Filter (Not Available)</div>
+            <div id="deck"></div>
+        </div>
     </body>
     <!--Script For Login Bar-->
     <script src="javascript/login.js"></script>
+    <!--Script For Flight List-->
+    <script src="javascript/flight.js"></script>
     <script>
         window.onload = function() {
             check_login_status();
+            load_cards();
         };
         window.onresize = function() {
+            load_cards();
         };
     </script>
 </html>
