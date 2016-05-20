@@ -24,6 +24,7 @@
             else {
                 $_SESSION['authen'] = 1;
                 $_SESSION['userinfo'] = $userinfo;
+                $_SESSION['cart'] = array();
                 $conn->close();
                 return 1;
             }
@@ -32,7 +33,6 @@
             if (session_status() == PHP_SESSION_NONE) session_start();
             session_unset();
             $_SESSION['authen'] = 0;
-            $conn->close();
         }
         public static function create($username, $password, $fname, $lname, $email) {
             $conn = new mysqli("127.0.0.1", "root", "", "bloodymary");

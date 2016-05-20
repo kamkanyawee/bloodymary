@@ -21,14 +21,16 @@
             if(Account::authenticate() != 1) return 0;
             if(session_status() == PHP_SESSION_NONE) session_start();
             $newcart = array();
-            foreach($_SESSION['cart'] as &$i) {
-                if($i['item']['FlightID'] == $flightid) {
-                    $i['qty'] -= 1;
+            if(sizeof($_SESSION['cart']) != 0) {
+                foreach($_SESSION['cart'] as &$i) {
+                    if($i['item']['FlightID'] == $flightid) {
+                        $i['qty'] -= 1;
 
+                    }
+                    if($i['qty'] > 0) $newcart[] = $i;
                 }
-                if($i['qty'] > 0) $newcart[] = $i;
+                $_SESSION['cart'] = $newcart;
             }
-            $_SESSION['cart'] = $newcart;
             return 1;
         }
         public static function gettotalfare() {
